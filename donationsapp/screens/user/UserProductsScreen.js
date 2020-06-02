@@ -83,7 +83,7 @@ const UserProductsScreen = props => {
   if (!isLoading && userProducts.length === 0) {
     return (
       <View style={styles.centered}>
-        <Text>No products found. Maybe start adding some!</Text>
+        <Text>No Donations found. Maybe start adding some!</Text>
       </View>
     );
   }
@@ -93,7 +93,7 @@ const UserProductsScreen = props => {
   };
 
   const deleteHandler = (id) => {
-    Alert.alert('Are you sure?', 'Do you really want to delete this item?', [
+    Alert.alert('Are you sure?', 'Do you really want to cancel your donation?', [
       { text: 'No', style: 'default' },
       {
         text: 'Yes',

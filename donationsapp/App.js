@@ -6,11 +6,12 @@ import * as Font from 'expo-font';
 import ReduxThunk from 'redux-thunk';
 
 import productsReducer from './store/reducers/products';
-
-import ShopNavigator from './navigation/ShopNavigator';
+import authReducer from './store/reducers/auth'
+import NavigationContainer from './navigation/NavigationContainer';
 
 const rootReducer = combineReducers({
   products: productsReducer,
+  auth:authReducer
   
 });
 
@@ -38,7 +39,7 @@ export default function App() {
   }
   return (
     <Provider store={store}>
-      <ShopNavigator />
+      <NavigationContainer />
     </Provider>
   );
 }
