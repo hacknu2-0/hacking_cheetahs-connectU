@@ -1,9 +1,9 @@
 # HackNU-2.0
 
 It is a online hackathon conducted by the NIIT University from 27.05.2020 to 03.05.2020.
-It was immense pleasure to be a part of this hackathon, great opportunity to work and build application while everyone is working remotely.
+Our immense pleasure to be a part of this hackathon, great opportunity to work and build application while everyone is working remotely.
 
-Our team hacking-cheetahs made a donations application interface under the category #this-pandemic.
+Our team hacking-cheetahs made a donations application under the category #this-pandemic.
 
 # Description
 
@@ -22,5 +22,6 @@ This app will be very helpful to maintain social distancing in the current scena
 6. Download the expo mobile client: https://play.google.com/store/apps/details?id=host.exp.exponent
 7. Scan the QR code from Expo app.
 
-Note: The application is still in development phase with more features. 
-      Its compatible on windows, we haven't checked on linux as of now. 
+Note:
+ The application is still in development phase with more features. 
+ Its compatible on windows, we haven't checked on linux as of now. 
