@@ -23,3 +23,4 @@ This app will be very helpful to maintain social distancing in the current scena
 7. Scan the QR code from Expo app.
 
 Note: The application is still in development phase with more features. 
+      Its compatible on windows, we haven't checked on linux as of now. 
