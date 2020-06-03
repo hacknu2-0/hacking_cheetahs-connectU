@@ -4,7 +4,7 @@ import {
   CREATE_PRODUCT,
   UPDATE_PRODUCT,
   SET_PRODUCTS
-} from '../actions/products';
+} from '../actions/doantions';
 import Product from '../../models/product';
 
 const initialState = {

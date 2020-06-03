@@ -12,7 +12,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { useSelector, useDispatch } from 'react-redux';
 
 import HeaderButton from '../../components/UI/HeaderButton';
-import * as productsActions from '../../store/actions/products';
+import * as productsActions from '../../store/actions/doantions';
 import Input from '../../components/UI/Input';
 import Colors from '../../constants/Colors';
 

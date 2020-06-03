@@ -5,12 +5,12 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import ReduxThunk from 'redux-thunk';
 
-import productsReducer from './store/reducers/products';
+import donationsReducer from './store/reducers/donations';
 import authReducer from './store/reducers/auth'
 import NavigationContainer from './navigation/NavigationContainer';
 
 const rootReducer = combineReducers({
-  products: productsReducer,
+  products: donationsReducer,
   auth:authReducer
   
 });

@@ -6,13 +6,13 @@ import {
   StyleSheet,
   TouchableOpacity,
   TouchableNativeFeedback,
-  Platform,
-  ModalDropdown
+  Platform
 } from 'react-native';
 
 import Card from '../UI/Card';
 
 const ProductItem = props => {
+  
   let TouchableCmp = TouchableOpacity;
 
   if (Platform.OS === 'android' && Platform.Version >= 21) {
@@ -28,7 +28,12 @@ const ProductItem = props => {
             <View style={styles.details}>
             
               <Text style={styles.title}>{props.title}</Text>
-              <Text style={styles.title}>{props.address}</Text>
+              <Text style={styles.title}>{props.mobileno}</Text>
+
+             
+      
+        
+        <Text style={styles.title}>{props.address}</Text>
               
               <Text style={styles.title}>{props.description}</Text>
               
@@ -37,7 +42,12 @@ const ProductItem = props => {
               <Text style={styles.title}>{props.timetopickup}</Text>
               
               <Text style={styles.title}>{props.datetopickup}</Text>
-              <Text style={styles.title}>{props.mobileno}</Text>
+
+        
+        
+     
+
+              
              
 
             </View>

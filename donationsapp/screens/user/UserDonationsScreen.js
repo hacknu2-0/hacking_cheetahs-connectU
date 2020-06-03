@@ -15,7 +15,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import HeaderButton from '../../components/UI/HeaderButton';
 import ProductItem from '../../components/shop/ProductItem';
 import Colors from '../../constants/Colors';
-import * as productsActions from '../../store/actions/products';
+import * as productsActions from '../../store/actions/doantions';
 
 const UserProductsScreen = props => {
   const [isLoading, setIsLoading] = useState(false);

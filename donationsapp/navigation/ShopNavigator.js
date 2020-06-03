@@ -7,9 +7,9 @@ import { Platform,SafeAreaView,Button,View, } from 'react-native';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import React from "react";
 import { Ionicons } from '@expo/vector-icons';
-import UserProductsScreen from '../screens/user/UserProductsScreen'
-import EditProductScreen from '../screens/user/EditProductScreen'
-import ProductsOverviewScreen from '../screens/shop/ProductsOverviewScreen'
+import UserDonationsScreen from '../screens/user/UserDonationsScreen'
+import EditDonationScreen from '../screens/user/EditDonationScreen'
+import DistributionsOverviewScreen from '../screens/distribution/DistributionsOverviewScreen'
 import AuthScreen from '../screens/user/AuthScreen'
 import StartupScreen from '../screens/StartupScreen';
 import { useDispatch } from 'react-redux';
@@ -29,7 +29,7 @@ const defaultNavOptions = {
 };
 const ProductsNavigator = createStackNavigator(
   {
-    ProductsOverview: ProductsOverviewScreen,
+    ProductsOverview: DistributionsOverviewScreen,
     
   },
   {
@@ -50,8 +50,8 @@ const ProductsNavigator = createStackNavigator(
 
 const AdminsNavigator = createStackNavigator(
     {
-      UserProducts: UserProductsScreen,
-      EditProduct: EditProductScreen
+      UserProducts: UserDonationsScreen,
+      EditProduct: EditDonationScreen
     },
     {
       navigationOptions: {
