@@ -7,13 +7,14 @@ import {
   Platform,
   ActivityIndicator,
   StyleSheet,
-  Alert
+  Alert,
+  ImageBackground
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import HeaderButton from '../../components/UI/HeaderButton';
-import ProductItem from '../../components/shop/ProductItem';
+import ProductItem from '../../components/style/ProductItem';
 import Colors from '../../constants/Colors';
 import * as productsActions from '../../store/actions/doantions';
 
@@ -107,10 +108,16 @@ const UserProductsScreen = props => {
  
 
   return (
+   
+    <ImageBackground source={require('../../assets/download.jpg')}
+    style={styles.container}>
+
+    
     <FlatList
       data={userProducts}
       keyExtractor={item => item.id}
       renderItem={itemData => (
+    
         <ProductItem
           address={itemData.item.address}
           title={itemData.item.title}
@@ -128,20 +135,23 @@ const UserProductsScreen = props => {
           }}
         >
           <Button
-            color={Colors.primary}
+            color='black'
             title="Edit "
             onPress={() => {
               editProductHandler(itemData.item.id);
             }}
           />
           <Button
-            color={Colors.primary}
+            color='black'
             title="Cancel "
             onPress={deleteHandler.bind(this, itemData.item.id)}
           />
         </ProductItem>
+        
+       
       )}
     />
+    </ImageBackground>
   );
 };
 
@@ -169,11 +179,19 @@ UserProductsScreen.navigationOptions = navData => {
           }}
         />
       </HeaderButtons>
+      
     )
   };
 };
 const styles = StyleSheet.create({
-  centered: { flex: 1, justifyContent: 'center', alignItems: 'center' }
+  centered: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  container: {
+    flex: 1,
+  
+    width:'100%',
+    height:'100%'
+  
+},
 });
 
 export default UserProductsScreen;

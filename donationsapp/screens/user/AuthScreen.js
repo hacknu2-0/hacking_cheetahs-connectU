@@ -6,7 +6,9 @@ import {
   StyleSheet,
   Button,
   ActivityIndicator,
-  Alert
+  Alert,
+  Image,
+  Text
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useDispatch } from 'react-redux';
@@ -106,7 +108,22 @@ const AuthScreen = props => {
      
       style={styles.screen}
     >
-      <LinearGradient colors={['#ffedff', '#ffe3ff']} style={styles.gradient}>
+      <LinearGradient colors={['#99FF99', '#99FF99']} style={styles.gradient}>
+      <View  >
+      <Text style={styles.text} >
+        ConnectU
+      </Text>
+      </View>
+      <View style={{marginVertical:50}}>
+      
+        
+     
+      
+      <Image
+      style={{width:100,height:100}}
+        source={require('../../assets/logo.jpg')}
+      />
+      </View>
         <Card style={styles.authContainer}>
           <ScrollView>
             <Input
@@ -146,7 +163,7 @@ const AuthScreen = props => {
             <View style={styles.buttonContainer}>
               <Button
                 title={`Switch to ${isSignup ? 'Login' : 'Sign Up'}`}
-                color={Colors.accent}
+                color='#00FF00'
                 onPress={() => {
                   setIsSignup(prevState => !prevState);
                 }}
@@ -179,7 +196,11 @@ const styles = StyleSheet.create({
     padding: 20
   },
   buttonContainer: {
-    marginTop: 10
+    marginTop: 10,
+  },
+  text:{
+    fontFamily:'open-sans-bold',
+    fontSize:30
   }
 });
 

@@ -6,13 +6,13 @@ import {
   Button,
   Platform,
   ActivityIndicator,
-  StyleSheet
+  StyleSheet,ImageBackground
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import HeaderButton from '../../components/UI/HeaderButton';
-import ProductItem from '../../components/shop/ProductItem';
+import ProductItem from '../../components/style/ProductItem';
 
 import * as productsActions from '../../store/actions/doantions';
 import Colors from '../../constants/Colors';
@@ -75,6 +75,7 @@ const ProductsOverviewScreen = props => {
 
   if (isLoading) {
     return (
+      
       <View style={styles.centered}>
         <ActivityIndicator size="large" color={Colors.primary} />
       </View>
@@ -90,12 +91,17 @@ const ProductsOverviewScreen = props => {
   }
 
   return (
+    <ImageBackground source={require('../../assets/download.jpg')}
+    style={styles.container}>
+
+    
     <FlatList
       onRefresh={loadProducts}
       refreshing={isRefreshing}
       data={products}
       keyExtractor={item => item.id}
       renderItem={itemData => (
+        
         <ProductItem
         address={itemData.item.address}
           title={itemData.item.title}
@@ -113,6 +119,8 @@ const ProductsOverviewScreen = props => {
         </ProductItem>
       )}
     />
+    </ImageBackground>
+    
   );
 };
 
@@ -135,7 +143,16 @@ ProductsOverviewScreen.navigationOptions = navData => {
 };
 
 const styles = StyleSheet.create({
-  centered: { flex: 1, justifyContent: 'center', alignItems: 'center' }
+  centered: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+  container: {
+    flex: 1,
+  
+    width:'100%',
+    height:'100%'
+  
+},
+
+
 });
 
 export default ProductsOverviewScreen;
